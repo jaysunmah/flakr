@@ -12,11 +12,15 @@
 		AB793EBA1CCC756900967CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793EB91CCC756900967CC4 /* AppDelegate.swift */; };
 		AB793EBC1CCC756900967CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793EBB1CCC756900967CC4 /* ViewController.swift */; };
 		AB793EBF1CCC756900967CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB793EBD1CCC756900967CC4 /* Main.storyboard */; };
-		AB793EC11CCC756900967CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB793EC01CCC756900967CC4 /* Assets.xcassets */; };
 		AB793EC41CCC756900967CC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB793EC21CCC756900967CC4 /* LaunchScreen.storyboard */; };
 		AB793ECF1CCC756900967CC4 /* flakrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793ECE1CCC756900967CC4 /* flakrUITests.swift */; };
 		AB793EDA1CCC85AC00967CC4 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793ED91CCC85AC00967CC4 /* DashBoardViewController.swift */; };
+		ABC1D8C31CCDE1690098966F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC1D8C21CCDE1690098966F /* Assets.xcassets */; };
 		ABDDF2D21CCD782E00303A10 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D11CCD782E00303A10 /* Client.swift */; };
+		ABDDF2D41CCD84AC00303A10 /* FlakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */; };
+		ABDDF2D61CCDB0FA00303A10 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D51CCDB0FA00303A10 /* MenuTableViewController.swift */; };
+		ABDDF2D81CCDB5AB00303A10 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D71CCDB5AB00303A10 /* ProfileViewController.swift */; };
+		ABDDF2DA1CCDDB7000303A10 /* MakeAnEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D91CCDDB7000303A10 /* MakeAnEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +42,18 @@
 		AB793EB91CCC756900967CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB793EBB1CCC756900967CC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB793EBE1CCC756900967CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB793EC01CCC756900967CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB793EC31CCC756900967CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB793EC51CCC756900967CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB793ECA1CCC756900967CC4 /* flakrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flakrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB793ECE1CCC756900967CC4 /* flakrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flakrUITests.swift; sourceTree = "<group>"; };
 		AB793ED01CCC756900967CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB793ED91CCC85AC00967CC4 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		ABC1D8C21CCDE1690098966F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABDDF2D11CCD782E00303A10 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlakeData.swift; sourceTree = "<group>"; };
+		ABDDF2D51CCDB0FA00303A10 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		ABDDF2D71CCDB5AB00303A10 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ABDDF2D91CCDDB7000303A10 /* MakeAnEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeAnEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +116,17 @@
 			isa = PBXGroup;
 			children = (
 				AB793EB91CCC756900967CC4 /* AppDelegate.swift */,
+				ABC1D8C21CCDE1690098966F /* Assets.xcassets */,
 				AB793EBB1CCC756900967CC4 /* ViewController.swift */,
 				AB793EBD1CCC756900967CC4 /* Main.storyboard */,
-				AB793EC01CCC756900967CC4 /* Assets.xcassets */,
 				AB793EC21CCC756900967CC4 /* LaunchScreen.storyboard */,
 				AB793EC51CCC756900967CC4 /* Info.plist */,
 				AB793ED91CCC85AC00967CC4 /* DashBoardViewController.swift */,
 				AB02DEB31CCD0F4900E8DAB8 /* CustomTableViewCell.swift */,
+				ABDDF2D51CCDB0FA00303A10 /* MenuTableViewController.swift */,
+				ABDDF2D71CCDB5AB00303A10 /* ProfileViewController.swift */,
+				ABDDF2D91CCDDB7000303A10 /* MakeAnEventViewController.swift */,
+				ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */,
 				ABDDF2D11CCD782E00303A10 /* Client.swift */,
 			);
 			path = flakr;
@@ -214,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB793EC41CCC756900967CC4 /* LaunchScreen.storyboard in Resources */,
-				AB793EC11CCC756900967CC4 /* Assets.xcassets in Resources */,
+				ABC1D8C31CCDE1690098966F /* Assets.xcassets in Resources */,
 				AB793EBF1CCC756900967CC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,11 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDDF2DA1CCDDB7000303A10 /* MakeAnEventViewController.swift in Sources */,
 				AB793EDA1CCC85AC00967CC4 /* DashBoardViewController.swift in Sources */,
+				ABDDF2D61CCDB0FA00303A10 /* MenuTableViewController.swift in Sources */,
 				AB793EBC1CCC756900967CC4 /* ViewController.swift in Sources */,
 				AB02DEB41CCD0F4900E8DAB8 /* CustomTableViewCell.swift in Sources */,
 				ABDDF2D21CCD782E00303A10 /* Client.swift in Sources */,
 				AB793EBA1CCC756900967CC4 /* AppDelegate.swift in Sources */,
+				ABDDF2D81CCDB5AB00303A10 /* ProfileViewController.swift in Sources */,
+				ABDDF2D41CCD84AC00303A10 /* FlakeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

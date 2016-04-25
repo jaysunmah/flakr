@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "540E3FD6AEE256560D7D38A4F3A57535ADD2911D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "89E8DEDF89FABA5040BE5A86ED4DA76D37A4B8FE" : 0,
+    "540E3FD6AEE256560D7D38A4F3A57535ADD2911D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8B9A9854-69FB-4D24-8CF6-5BB70DD2F174",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "89E8DEDF89FABA5040BE5A86ED4DA76D37A4B8FE" : "",
+    "540E3FD6AEE256560D7D38A4F3A57535ADD2911D" : "flakr\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "flakr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "flakr\/flakr.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jaysunmah\/flakr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "540E3FD6AEE256560D7D38A4F3A57535ADD2911D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jasonmtwo\/jasonmtwo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89E8DEDF89FABA5040BE5A86ED4DA76D37A4B8FE"
+    }
+  ]
+}

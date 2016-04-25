@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     //automatically called when view is loaded
     override func viewDidLoad() {
-        let jason = 1
-        var sux = 2
-        var list = [1,2,3]
         
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "flaked")
+        backgroundImage.alpha = 0.5
+        self.view.insertSubview(backgroundImage, atIndex: 0)
         
-
+//        self.view.backgroundColor = UIColor.cyanColor()
         initializeSplashLabels()
         initializeSplashTextFields()
         initializeRegisterButton()
@@ -44,14 +45,16 @@ class ViewController: UIViewController {
     
     func initializeSplashTextFields() {
         username = UITextField()
-        username!.frame = CGRectMake(screenSize.width/2 - 100, 3 * screenSize.height/10, 200, screenSize.height/10)
+        username!.frame = CGRectMake(screenSize.width/2 - 100, 3 * screenSize.height/10, 200, screenSize.height * 0.045)
         username!.placeholder = "Username:"
+        username!.backgroundColor = UIColor.cyanColor()
         view.addSubview(username!)
         
         password = UITextField()
-        password!.frame = CGRectMake(screenSize.width/2 - 100, 4 * screenSize.height/10, 200, screenSize.height/10)
+        password!.frame = CGRectMake(screenSize.width/2 - 100, 4 * screenSize.height/10, 200, screenSize.height * 0.045)
         password!.placeholder = "Password"
         password!.secureTextEntry = true
+        password!.backgroundColor = UIColor.cyanColor()
         view.addSubview(password!)
     }
     
@@ -75,13 +78,18 @@ class ViewController: UIViewController {
         print(password!.text!)
         
         let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
+        
         vc.username = username!.text!
         
-        let drawerCon = DrawerController(centerViewController: UINavigationController(rootViewController: vc),leftDrawerViewController: UITableViewController())
+        let menuTable = MenuTableViewController()
+        
+        menuTable.dashboardVC = vc;
+        
+        let drawerCon = DrawerController(centerViewController: UINavigationController(rootViewController: vc),leftDrawerViewController: menuTable)
 
         drawerCon.openDrawerGestureModeMask = OpenDrawerGestureMode.BezelPanningCenterView
         drawerCon.closeDrawerGestureModeMask = CloseDrawerGestureMode.PanningCenterView
-
+        
         self.presentViewController(drawerCon, animated: true, completion: nil)
     }
 
