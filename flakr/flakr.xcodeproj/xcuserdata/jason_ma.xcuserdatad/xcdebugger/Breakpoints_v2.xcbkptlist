@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "flakr/ViewController.swift"
-            timestampString = "483253865.185619"
+            timestampString = "483259974.550902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "initializeSplashTextFields()"
             landmarkType = "5">
          </BreakpointContent>

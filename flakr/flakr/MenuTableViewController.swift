@@ -12,7 +12,7 @@ import DrawerController
 class MenuTableViewController: UITableViewController {
     
     var dashboard_table: UITableView?
-    var data: [String] = ["dashboard", "profile", "rate an event"]
+    var data: [String] = ["dashboard", "profile", "rate an event", "log out"]
     let cellReuseIdendifier = "cell"
     
     var dashboardVC: DashBoardViewController?
@@ -74,6 +74,8 @@ class MenuTableViewController: UITableViewController {
         evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: ProfileViewController()), withCloseAnimation: true, completion: nil)
         } else if (selectedView == "rate an event") {
         evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: MakeAnEventViewController()), withCloseAnimation: true, completion: nil)
+        } else if (selectedView == "log out") {
+            evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: ViewController()), withCloseAnimation: true, completion: nil)
         }
 
         

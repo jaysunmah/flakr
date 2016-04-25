@@ -7,54 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C95545F062605A82573D5645E33EAAE /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71D12840F347852F6117FDD74A2A4A0 /* DrawerController.swift */; };
-		160B77C1A114148506A59AEE335804DA /* Pods-flakr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F5623314D7574E613212F6F0CFECC5 /* Pods-flakr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2075BE989A20851497A9BB2821FEDB09 /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD75B16F98C4C5E871D30C434DBB3AB /* DrawerBarButtonItem.swift */; };
-		27FB55C7BFB97B8B5BC2A7C1E2DF2704 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A909390118A04D7DACFFFD433FA17F /* DrawerVisualState.swift */; };
-		47BC3C34ACF15792EC6CCC890B8B3EE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */; };
-		54F5DE5E43D35235A9274A6DE4792899 /* Pods-flakr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC71D254E5C4176D8E16A4AE454281A /* Pods-flakr-dummy.m */; };
-		6CF92D21FDC1951641284136BDFF88AA /* DrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06AD08EE9B922CA32CE72829FCA9C390 /* DrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83F6EF6914ADDD32335D883655DE8995 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */; };
-		8B459BE802E17E6B91628EA15B2B3E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */; };
-		9F60D52F733C26F37832E3A20F162943 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8450ECBA419C032C78EC1FDC8848890 /* AnimatedMenuButton.swift */; };
-		A3D8574FEFC96B6E5CCE5EAFD1086DA1 /* DrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2205F2E998BA1BD7EBF574E3465328 /* DrawerController-dummy.m */; };
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = AF93C66A2DC880650FE80E3D3B87EB43 /* Empty.m */; };
+		0C95545F062605A82573D5645E33EAAE /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6A8306DC7397307AF06643A747536 /* DrawerController.swift */; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 58293D4EA3DD1AB29F80D07668FAA130 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1921825C0ED7968D44299A5FDEB80517 /* Pods-flakr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC71D254E5C4176D8E16A4AE454281A /* Pods-flakr-dummy.m */; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = D54BAC5C3049C4A73E54C0E52845D48C /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D5CE26857D44CFACCE02A011DDD0DC /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 539998E3E98FF7C79587217A555DCBC9 /* Firebase-dummy.m */; };
+		2075BE989A20851497A9BB2821FEDB09 /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5042305317ACBCB0D58CF610955F47 /* DrawerBarButtonItem.swift */; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = B9172B443BF21B5286D5DA406668A13B /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27FB55C7BFB97B8B5BC2A7C1E2DF2704 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D3ECECDA6156EA2C1DEF2B7C6D4EC /* DrawerVisualState.swift */; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD1675E9954D2D710F2944EECC611C8 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		321EEB3FFD95F935AAD7057F03F2C539 /* Pods-flakr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F5623314D7574E613212F6F0CFECC5 /* Pods-flakr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CF2ECB2B9E11A520B73981A8FFB0BFE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C70D9FD69E7A5B53289DA21CADC1F8 /* SystemConfiguration.framework */; };
+		47BC3C34ACF15792EC6CCC890B8B3EE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4641A7DE9F5981E7EC5C3518A1A7D0D8 /* Foundation.framework */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 60AD511F778E931D6E5A53A13704CC51 /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDAD5E899D8616C554DC7C50792E2D2 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B39F990BF7EFB49638F0BDE6D7473B6 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CF92D21FDC1951641284136BDFF88AA /* DrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DFBCD55C6F3416F8F5C6DE62DFC7EB /* DrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83F6EF6914ADDD32335D883655DE8995 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDD671643C39B2AAFA29B7E97038676 /* QuartzCore.framework */; };
+		85A4F602CA6B100539E601AE38A2D9C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B506D5C8332B8322476A9B610A1C8DF /* CFNetwork.framework */; };
+		9F60D52F733C26F37832E3A20F162943 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828CE6D2754C1391B34E12014D09246 /* AnimatedMenuButton.swift */; };
+		A3D8574FEFC96B6E5CCE5EAFD1086DA1 /* DrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F990560B6D4A96F490E66885A392D0B6 /* DrawerController-dummy.m */; };
+		B797FABB60DA9BA966ABEA640CA71A11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4641A7DE9F5981E7EC5C3518A1A7D0D8 /* Foundation.framework */; };
+		BD050B295EC63FCBD295EBA18A2F27EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183DF63A0ABDC6FEE4A0ACC19DA66F54 /* Security.framework */; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 778355C690D2F3DAF9A1C3E9D510460E /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = B9741E96577FA277B9D11F532E5C2048 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFEBECFC61D01720EA26E0FC844DE04D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4641A7DE9F5981E7EC5C3518A1A7D0D8 /* Foundation.framework */; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 242097B14625B71CB62D151AC6B5BFA9 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B35D0205AD6379B0BC25981CE69864F /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		922E4CA355705E43D60D0F4C21E3C7BE /* PBXContainerItemProxy */ = {
+		265E6C20ED29B99805DF0EDBF4A6BD2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D083682CF36071495A66680CF5CE2BA5;
 			remoteInfo = DrawerController;
 		};
+		CF98A3ED40EAFD4EC868ACFE3D553264 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0014812877D0B825998A18793522D22B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F9D66F59358106D862437D1D818B7A /* Pods-flakr-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-flakr-resources.sh"; sourceTree = "<group>"; };
-		06AD08EE9B922CA32CE72829FCA9C390 /* DrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DrawerController-umbrella.h"; sourceTree = "<group>"; };
+		07E5BCFE240F9F2C4164351DFCB35FD5 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		181D3ECECDA6156EA2C1DEF2B7C6D4EC /* DrawerVisualState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerVisualState.swift; path = DrawerController/DrawerVisualState.swift; sourceTree = "<group>"; };
+		183DF63A0ABDC6FEE4A0ACC19DA66F54 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		1BE3BB79518464C1AB5796BE5FDC4F88 /* Pods-flakr-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-flakr-acknowledgements.plist"; sourceTree = "<group>"; };
+		242097B14625B71CB62D151AC6B5BFA9 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
 		24F5623314D7574E613212F6F0CFECC5 /* Pods-flakr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-flakr-umbrella.h"; sourceTree = "<group>"; };
+		28D5CE26857D44CFACCE02A011DDD0DC /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		3788EF6BE260A41E1A52037FD6E86BAA /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		3AF6A8306DC7397307AF06643A747536 /* DrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerController.swift; path = DrawerController/DrawerController.swift; sourceTree = "<group>"; };
+		4641A7DE9F5981E7EC5C3518A1A7D0D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4BEF6B729AD68E4AA3602323FD8EE918 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		539998E3E98FF7C79587217A555DCBC9 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		58293D4EA3DD1AB29F80D07668FAA130 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
 		5939B4CE601E09FA4B6D1899E74EA071 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5B39F990BF7EFB49638F0BDE6D7473B6 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
 		5EC71D254E5C4176D8E16A4AE454281A /* Pods-flakr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-flakr-dummy.m"; sourceTree = "<group>"; };
+		60AD511F778E931D6E5A53A13704CC51 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		6B506D5C8332B8322476A9B610A1C8DF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		7461A400B6B43D5773B8F89CB4505FF2 /* Pods-flakr-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-flakr-frameworks.sh"; sourceTree = "<group>"; };
-		87A909390118A04D7DACFFFD433FA17F /* DrawerVisualState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerVisualState.swift; path = DrawerController/DrawerVisualState.swift; sourceTree = "<group>"; };
+		75DFBCD55C6F3416F8F5C6DE62DFC7EB /* DrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DrawerController-umbrella.h"; sourceTree = "<group>"; };
+		778355C690D2F3DAF9A1C3E9D510460E /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		7A5DF2504720BAD08C72DE601CEE987B /* DrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B35D0205AD6379B0BC25981CE69864F /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
 		8AC065718D2990DF2C6C670B2130226C /* Pods-flakr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-flakr.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A8450ECBA419C032C78EC1FDC8848890 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedMenuButton.swift; path = DrawerController/AnimatedMenuButton.swift; sourceTree = "<group>"; };
-		AF2205F2E998BA1BD7EBF574E3465328 /* DrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DrawerController-dummy.m"; sourceTree = "<group>"; };
-		AFD75B16F98C4C5E871D30C434DBB3AB /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerBarButtonItem.swift; path = DrawerController/DrawerBarButtonItem.swift; sourceTree = "<group>"; };
-		B96BCD7D7FCFE4EA6057D20D54ACDD13 /* DrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DrawerController.xcconfig; sourceTree = "<group>"; };
+		994146E90DF937BE7C6DA8365C59A6A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BDD671643C39B2AAFA29B7E97038676 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AEDAD5E899D8616C554DC7C50792E2D2 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		AF93C66A2DC880650FE80E3D3B87EB43 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		B9172B443BF21B5286D5DA406668A13B /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		B9741E96577FA277B9D11F532E5C2048 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
 		BDC22D87D8B22FE4B58D60CF71C52E96 /* Pods-flakr-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-flakr-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C895D72A7777AE0F100FEF3D4E444DF8 /* DrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DrawerController-prefix.pch"; sourceTree = "<group>"; };
-		CA6B6F9AC385E8CEF585C4A10383E5F1 /* DrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DrawerController.modulemap; sourceTree = "<group>"; };
-		D71D12840F347852F6117FDD74A2A4A0 /* DrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerController.swift; path = DrawerController/DrawerController.swift; sourceTree = "<group>"; };
+		C288A86A2518ADCDD4142BC725D4070C /* Pods_flakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C828CE6D2754C1391B34E12014D09246 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedMenuButton.swift; path = DrawerController/AnimatedMenuButton.swift; sourceTree = "<group>"; };
+		CB442E09EC006FFB79FD68927217DD7F /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		CCD1675E9954D2D710F2944EECC611C8 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		CD5042305317ACBCB0D58CF610955F47 /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawerBarButtonItem.swift; path = DrawerController/DrawerBarButtonItem.swift; sourceTree = "<group>"; };
+		D54BAC5C3049C4A73E54C0E52845D48C /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		DB391958387B5C131B2D5798612C4108 /* Pods-flakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-flakr.release.xcconfig"; sourceTree = "<group>"; };
-		DBD8D5AA4E137B4CFAFE7B34858053BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC24AFE814EAC398DEA0F733679849FE /* Pods_flakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F46F395914B9B279B7F5835A3F84057E /* DrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E4ADA828AEDBF8B67958330E1D46612E /* DrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DrawerController.xcconfig; sourceTree = "<group>"; };
+		E8B74799294FC613211097528FB4B096 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		F34FA49DE961FDBC81843AAF56286308 /* DrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DrawerController.modulemap; sourceTree = "<group>"; };
+		F4356587D5233033DCCEDAFBB33F67BF /* DrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DrawerController-prefix.pch"; sourceTree = "<group>"; };
+		F990560B6D4A96F490E66885A392D0B6 /* DrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DrawerController-dummy.m"; sourceTree = "<group>"; };
+		F9C70D9FD69E7A5B53289DA21CADC1F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		FC482F01B98B76107054F4347BD9BD6E /* Pods-flakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-flakr.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,102 +116,143 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D502BBBA7E187608E020912CBB95DFBE /* Frameworks */ = {
+		1DC6A29977AA0AB43E49EAC0B9B14B34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B459BE802E17E6B91628EA15B2B3E4D /* Foundation.framework in Frameworks */,
+				B797FABB60DA9BA966ABEA640CA71A11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A4F602CA6B100539E601AE38A2D9C0 /* CFNetwork.framework in Frameworks */,
+				DFEBECFC61D01720EA26E0FC844DE04D /* Foundation.framework in Frameworks */,
+				BD050B295EC63FCBD295EBA18A2F27EB /* Security.framework in Frameworks */,
+				3CF2ECB2B9E11A520B73981A8FFB0BFE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15F89CB7185B7EDCB94AA6CC5C605413 /* Pods */ = {
+		00D2B420FECA5392498104F54075C41D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				A50FBA35D13E87402E477215E38E1A04 /* DrawerController */,
+				AF93C66A2DC880650FE80E3D3B87EB43 /* Empty.m */,
+				778355C690D2F3DAF9A1C3E9D510460E /* FAuthData.h */,
+				28D5CE26857D44CFACCE02A011DDD0DC /* FAuthType.h */,
+				242097B14625B71CB62D151AC6B5BFA9 /* FConfig.h */,
+				7B35D0205AD6379B0BC25981CE69864F /* FDataSnapshot.h */,
+				B9172B443BF21B5286D5DA406668A13B /* FEventType.h */,
+				D54BAC5C3049C4A73E54C0E52845D48C /* Firebase.h */,
+				CCD1675E9954D2D710F2944EECC611C8 /* FirebaseApp.h */,
+				5B39F990BF7EFB49638F0BDE6D7473B6 /* FirebaseServerValue.h */,
+				B9741E96577FA277B9D11F532E5C2048 /* FMutableData.h */,
+				60AD511F778E931D6E5A53A13704CC51 /* FQuery.h */,
+				58293D4EA3DD1AB29F80D07668FAA130 /* FTransactionResult.h */,
+				EAE9BA4D0A1D53917223936C29B9CFDD /* Frameworks */,
+				064D3013B28F20835AE7121367240BA4 /* Support Files */,
 			);
-			name = Pods;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
-		3DA99E1CF4E9CD1C91DAFBD322FC122C /* Products */ = {
+		064D3013B28F20835AE7121367240BA4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F46F395914B9B279B7F5835A3F84057E /* DrawerController.framework */,
-				EC24AFE814EAC398DEA0F733679849FE /* Pods_flakr.framework */,
+				CB442E09EC006FFB79FD68927217DD7F /* Firebase.modulemap */,
+				E8B74799294FC613211097528FB4B096 /* Firebase.xcconfig */,
+				539998E3E98FF7C79587217A555DCBC9 /* Firebase-dummy.m */,
+				3788EF6BE260A41E1A52037FD6E86BAA /* Firebase-prefix.pch */,
+				AEDAD5E899D8616C554DC7C50792E2D2 /* Firebase-umbrella.h */,
+				994146E90DF937BE7C6DA8365C59A6A0 /* Info.plist */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		08A7E1D976E0204E32ADD9E47C6529D9 /* DrawerVisualStates */ = {
 			isa = PBXGroup;
 			children = (
-				B0525A0EB9A9840C5D1396127AE7FEAF /* iOS */,
+				C828CE6D2754C1391B34E12014D09246 /* AnimatedMenuButton.swift */,
+				CD5042305317ACBCB0D58CF610955F47 /* DrawerBarButtonItem.swift */,
+				181D3ECECDA6156EA2C1DEF2B7C6D4EC /* DrawerVisualState.swift */,
+			);
+			name = DrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF1F62199998300B236271E680517B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5DAAA6BAE93C0C3E96997B509486E000 /* Core */ = {
+		2FDF1F62199998300B236271E680517B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D71D12840F347852F6117FDD74A2A4A0 /* DrawerController.swift */,
+				6B506D5C8332B8322476A9B610A1C8DF /* CFNetwork.framework */,
+				4641A7DE9F5981E7EC5C3518A1A7D0D8 /* Foundation.framework */,
+				9BDD671643C39B2AAFA29B7E97038676 /* QuartzCore.framework */,
+				183DF63A0ABDC6FEE4A0ACC19DA66F54 /* Security.framework */,
+				F9C70D9FD69E7A5B53289DA21CADC1F8 /* SystemConfiguration.framework */,
 			);
-			name = Core;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		7BC7C7C1F02CCF8F85D0F608033B48C0 /* DrawerVisualStates */ = {
+		34C4D1D1B6930D571159D5905E9B3DF7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A8450ECBA419C032C78EC1FDC8848890 /* AnimatedMenuButton.swift */,
-				AFD75B16F98C4C5E871D30C434DBB3AB /* DrawerBarButtonItem.swift */,
-				87A909390118A04D7DACFFFD433FA17F /* DrawerVisualState.swift */,
+				F34FA49DE961FDBC81843AAF56286308 /* DrawerController.modulemap */,
+				E4ADA828AEDBF8B67958330E1D46612E /* DrawerController.xcconfig */,
+				F990560B6D4A96F490E66885A392D0B6 /* DrawerController-dummy.m */,
+				F4356587D5233033DCCEDAFBB33F67BF /* DrawerController-prefix.pch */,
+				75DFBCD55C6F3416F8F5C6DE62DFC7EB /* DrawerController-umbrella.h */,
+				0014812877D0B825998A18793522D22B /* Info.plist */,
 			);
-			name = DrawerVisualStates;
+			name = "Support Files";
+			path = "../Target Support Files/DrawerController";
+			sourceTree = "<group>";
+		};
+		650361768503FCBC64D0973A3260DB87 /* DrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				7F2258393DA227200366F9FEDCCC478B /* Core */,
+				08A7E1D976E0204E32ADD9E47C6529D9 /* DrawerVisualStates */,
+				34C4D1D1B6930D571159D5905E9B3DF7 /* Support Files */,
+			);
+			path = DrawerController;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				15F89CB7185B7EDCB94AA6CC5C605413 /* Pods */,
-				3DA99E1CF4E9CD1C91DAFBD322FC122C /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				B37C7F66ABB1ABCD1C473F2675531004 /* Pods */,
+				CF2850285035E49719EC5B80410244D9 /* Products */,
 				E4174FD0CFF2C4549D8AB6E59F5C0BFB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		946BC333DF9BB82804D09F920A538808 /* Support Files */ = {
+		7F2258393DA227200366F9FEDCCC478B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CA6B6F9AC385E8CEF585C4A10383E5F1 /* DrawerController.modulemap */,
-				B96BCD7D7FCFE4EA6057D20D54ACDD13 /* DrawerController.xcconfig */,
-				AF2205F2E998BA1BD7EBF574E3465328 /* DrawerController-dummy.m */,
-				C895D72A7777AE0F100FEF3D4E444DF8 /* DrawerController-prefix.pch */,
-				06AD08EE9B922CA32CE72829FCA9C390 /* DrawerController-umbrella.h */,
-				DBD8D5AA4E137B4CFAFE7B34858053BD /* Info.plist */,
+				3AF6A8306DC7397307AF06643A747536 /* DrawerController.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DrawerController";
+			name = Core;
 			sourceTree = "<group>";
 		};
-		A50FBA35D13E87402E477215E38E1A04 /* DrawerController */ = {
+		B37C7F66ABB1ABCD1C473F2675531004 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5DAAA6BAE93C0C3E96997B509486E000 /* Core */,
-				7BC7C7C1F02CCF8F85D0F608033B48C0 /* DrawerVisualStates */,
-				946BC333DF9BB82804D09F920A538808 /* Support Files */,
+				650361768503FCBC64D0973A3260DB87 /* DrawerController */,
+				00D2B420FECA5392498104F54075C41D /* Firebase */,
 			);
-			path = DrawerController;
-			sourceTree = "<group>";
-		};
-		B0525A0EB9A9840C5D1396127AE7FEAF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */,
-				FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */,
-			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C4E6DE01F7BEC8DC6B457FDEF3CDF3FD /* Pods-flakr */ = {
@@ -184,6 +273,16 @@
 			path = "Target Support Files/Pods-flakr";
 			sourceTree = "<group>";
 		};
+		CF2850285035E49719EC5B80410244D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A5DF2504720BAD08C72DE601CEE987B /* DrawerController.framework */,
+				07E5BCFE240F9F2C4164351DFCB35FD5 /* Firebase.framework */,
+				C288A86A2518ADCDD4142BC725D4070C /* Pods_flakr.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E4174FD0CFF2C4549D8AB6E59F5C0BFB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,9 +291,44 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		EAE9BA4D0A1D53917223936C29B9CFDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BEF6B729AD68E4AA3602323FD8EE918 /* libFirebaseStatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D2BBDD03F2E789B250965B635489105 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321EEB3FFD95F935AAD7057F03F2C539 /* Pods-flakr-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A191732B2E8F7546BA7D38A5CC54981C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,33 +337,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD8FAFB1549CFAEE00F6F7A41AB62648 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				160B77C1A114148506A59AEE335804DA /* Pods-flakr-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A68A906E4617EC99803B5B9CDFFB134E /* Pods-flakr */ = {
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B619566373539D250ADC22342F1B9D7D /* Build configuration list for PBXNativeTarget "Pods-flakr" */;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
 			buildPhases = (
-				67E2D0D4EED78119C200A9AFDDAF08C8 /* Sources */,
-				D502BBBA7E187608E020912CBB95DFBE /* Frameworks */,
-				DD8FAFB1549CFAEE00F6F7A41AB62648 /* Headers */,
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E6A1E4E1ED29382D7C09172DF9A6F472 /* PBXTargetDependency */,
 			);
-			name = "Pods-flakr";
-			productName = "Pods-flakr";
-			productReference = EC24AFE814EAC398DEA0F733679849FE /* Pods_flakr.framework */;
+			name = Firebase;
+			productName = Firebase;
+			productReference = 07E5BCFE240F9F2C4164351DFCB35FD5 /* Firebase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D083682CF36071495A66680CF5CE2BA5 /* DrawerController */ = {
@@ -246,7 +371,26 @@
 			);
 			name = DrawerController;
 			productName = DrawerController;
-			productReference = F46F395914B9B279B7F5835A3F84057E /* DrawerController.framework */;
+			productReference = 7A5DF2504720BAD08C72DE601CEE987B /* DrawerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF276670D3B87AFBAEABFE6CFDDD50DB /* Pods-flakr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90E0FD9C0162DA9080D38C5AB970C9F0 /* Build configuration list for PBXNativeTarget "Pods-flakr" */;
+			buildPhases = (
+				4574AFFCA8B7C61B013D450EFE818044 /* Sources */,
+				1DC6A29977AA0AB43E49EAC0B9B14B34 /* Frameworks */,
+				6D2BBDD03F2E789B250965B635489105 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E708CA1358146E496A9979DE9C460F5E /* PBXTargetDependency */,
+				1AB94175DE0EA374800E0840C5C5EEAC /* PBXTargetDependency */,
+			);
+			name = "Pods-flakr";
+			productName = "Pods-flakr";
+			productReference = C288A86A2518ADCDD4142BC725D4070C /* Pods_flakr.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -266,12 +410,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3DA99E1CF4E9CD1C91DAFBD322FC122C /* Products */;
+			productRefGroup = CF2850285035E49719EC5B80410244D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D083682CF36071495A66680CF5CE2BA5 /* DrawerController */,
-				A68A906E4617EC99803B5B9CDFFB134E /* Pods-flakr */,
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				FF276670D3B87AFBAEABFE6CFDDD50DB /* Pods-flakr */,
 			);
 		};
 /* End PBXProject section */
@@ -289,29 +434,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67E2D0D4EED78119C200A9AFDDAF08C8 /* Sources */ = {
+		4574AFFCA8B7C61B013D450EFE818044 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F5DE5E43D35235A9274A6DE4792899 /* Pods-flakr-dummy.m in Sources */,
+				1921825C0ED7968D44299A5FDEB80517 /* Pods-flakr-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E6A1E4E1ED29382D7C09172DF9A6F472 /* PBXTargetDependency */ = {
+		1AB94175DE0EA374800E0840C5C5EEAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = CF98A3ED40EAFD4EC868ACFE3D553264 /* PBXContainerItemProxy */;
+		};
+		E708CA1358146E496A9979DE9C460F5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DrawerController;
 			target = D083682CF36071495A66680CF5CE2BA5 /* DrawerController */;
-			targetProxy = 922E4CA355705E43D60D0F4C21E3C7BE /* PBXContainerItemProxy */;
+			targetProxy = 265E6C20ED29B99805DF0EDBF4A6BD2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0F9E809A29A0E5FD0F9884D98DCFDF16 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B96BCD7D7FCFE4EA6057D20D54ACDD13 /* DrawerController.xcconfig */;
+			baseConfigurationReference = E4ADA828AEDBF8B67958330E1D46612E /* DrawerController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -330,6 +490,40 @@
 				MODULEMAP_FILE = "Target Support Files/DrawerController/DrawerController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = DrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		568BFD896EB8CCC5B4C8D5BD8FA59BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC482F01B98B76107054F4347BD9BD6E /* Pods-flakr.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-flakr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-flakr/Pods-flakr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_flakr;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -382,7 +576,7 @@
 		};
 		9B799D5BBA0187CCB35BC5D90D7551A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B96BCD7D7FCFE4EA6057D20D54ACDD13 /* DrawerController.xcconfig */;
+			baseConfigurationReference = E4ADA828AEDBF8B67958330E1D46612E /* DrawerController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -401,6 +595,97 @@
 				MODULEMAP_FILE = "Target Support Files/DrawerController/DrawerController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E5F9A409F7A80E320328AA627E5F72F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B74799294FC613211097528FB4B096 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A137EDCFE721980B861039D09E3342BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B74799294FC613211097528FB4B096 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEF751014DDFDFCB64C00EF3CAC2F6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB391958387B5C131B2D5798612C4108 /* Pods-flakr.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-flakr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-flakr/Pods-flakr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_flakr;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,73 +731,6 @@
 			};
 			name = Release;
 		};
-		C85D52F15EEA4452972AF6D58CB34A67 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB391958387B5C131B2D5798612C4108 /* Pods-flakr.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-flakr/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-flakr/Pods-flakr.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_flakr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E87904D02C04304CF901D2870A221DE6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC482F01B98B76107054F4347BD9BD6E /* Pods-flakr.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-flakr/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-flakr/Pods-flakr.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_flakr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,11 +752,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B619566373539D250ADC22342F1B9D7D /* Build configuration list for PBXNativeTarget "Pods-flakr" */ = {
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E87904D02C04304CF901D2870A221DE6 /* Debug */,
-				C85D52F15EEA4452972AF6D58CB34A67 /* Release */,
+				9E5F9A409F7A80E320328AA627E5F72F /* Debug */,
+				A137EDCFE721980B861039D09E3342BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90E0FD9C0162DA9080D38C5AB970C9F0 /* Build configuration list for PBXNativeTarget "Pods-flakr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568BFD896EB8CCC5B4C8D5BD8FA59BB7 /* Debug */,
+				BEF751014DDFDFCB64C00EF3CAC2F6B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -5,13 +5,16 @@ PODS:
   - DrawerController/Core (1.1.0)
   - DrawerController/DrawerVisualStates (1.1.0):
     - DrawerController/Core
+  - Firebase (2.5.1)
 
 DEPENDENCIES:
   - DrawerController (~> 1.0)
+  - Firebase (>= 2.5.1)
 
 SPEC CHECKSUMS:
   DrawerController: 8fd56e6238399a08c4af054fbea0ef8669cd81f3
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
 
-PODFILE CHECKSUM: bcd693a5859637832297dd28c6a221891d88feb2
+PODFILE CHECKSUM: f9b0ec61f5367830ce44d68275d0c1b3a22828d1
 
 COCOAPODS: 1.0.0.beta.8
