@@ -17,6 +17,7 @@
 		AB793EDA1CCC85AC00967CC4 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793ED91CCC85AC00967CC4 /* DashBoardViewController.swift */; };
 		ABC1D8C31CCDE1690098966F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC1D8C21CCDE1690098966F /* Assets.xcassets */; };
 		ABC1D8C51CCEA6810098966F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC1D8C41CCEA6810098966F /* DataService.swift */; };
+		ABC1D8C71CCEB5250098966F /* Flake.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC1D8C61CCEB5250098966F /* Flake.swift */; };
 		ABDDF2D21CCD782E00303A10 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D11CCD782E00303A10 /* Client.swift */; };
 		ABDDF2D41CCD84AC00303A10 /* FlakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */; };
 		ABDDF2D61CCDB0FA00303A10 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF2D51CCDB0FA00303A10 /* MenuTableViewController.swift */; };
@@ -51,6 +52,7 @@
 		AB793ED91CCC85AC00967CC4 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		ABC1D8C21CCDE1690098966F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABC1D8C41CCEA6810098966F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		ABC1D8C61CCEB5250098966F /* Flake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flake.swift; sourceTree = "<group>"; };
 		ABDDF2D11CCD782E00303A10 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlakeData.swift; sourceTree = "<group>"; };
 		ABDDF2D51CCDB0FA00303A10 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				ABDDF2D31CCD84AC00303A10 /* FlakeData.swift */,
 				ABDDF2D11CCD782E00303A10 /* Client.swift */,
 				ABC1D8C41CCEA6810098966F /* DataService.swift */,
+				ABC1D8C61CCEB5250098966F /* Flake.swift */,
 				ABC1D8C21CCDE1690098966F /* Assets.xcassets */,
 			);
 			path = flakr;
@@ -299,6 +302,7 @@
 				ABDDF2DA1CCDDB7000303A10 /* MakeAnEventViewController.swift in Sources */,
 				AB793EDA1CCC85AC00967CC4 /* DashBoardViewController.swift in Sources */,
 				ABDDF2D61CCDB0FA00303A10 /* MenuTableViewController.swift in Sources */,
+				ABC1D8C71CCEB5250098966F /* Flake.swift in Sources */,
 				AB793EBC1CCC756900967CC4 /* ViewController.swift in Sources */,
 				AB02DEB41CCD0F4900E8DAB8 /* CustomTableViewCell.swift in Sources */,
 				ABDDF2D21CCD782E00303A10 /* Client.swift in Sources */,

@@ -37,4 +37,17 @@ class DataService {
         
         USER_REF.childByAppendingPath(uid).setValue(user)
     }
+
+    func createNewFlake(flake: Dictionary<String, AnyObject>) {
+        
+        // Save the Joke
+        // JOKE_REF is the parent of the new Joke: "jokes".
+        // childByAutoId() saves the joke and gives it its own ID.
+        
+        let firebaseNewFlake = FLAKE_REF.childByAutoId()
+        
+        // setValue() saves to Firebase.
+        
+        firebaseNewFlake.setValue(flake)
+    }
 }

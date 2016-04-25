@@ -15,7 +15,7 @@ class DashBoardViewController: UITableViewController {
     var username: String?
     var dashboard_table: UITableView?
     var data: [String] = ["hello", "world", "a","b","c","d","e","f","g","hello", "world", "a","b","c","d","e","f","g"]
-    let cellReuseIdendifier = "cell"
+    let cellReuseIdendifier = "cell"    
 
 
     

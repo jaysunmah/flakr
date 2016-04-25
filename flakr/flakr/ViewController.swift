@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        myRootRef.setValue("LOL HOW DOES THIS WORK")
         // Do any additional setup after loading the view, typically from a nib.
         
         
