@@ -28,6 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var defaultPic: UIImageView = UIImageView()
     let imagePicker = UIImagePickerController()
     
+    let sdate:NSDate = NSDate()
+    
     //automatically called when view is loaded
     override func viewDidLoad() {
 //        self.view.backgroundColor = UIColor.whiteColor()
@@ -66,20 +68,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         formatter.dateFormat = "MM-dd-yyyy";
         startDate = formatter.stringFromDate(date);
         
-        // Do any additional setup after loading the view, typically from a nib.
+
         
-//        var formatter1 = NSDateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-//        dateAsString = "2015-10-08 14:25:37"
-//        date1 = dateFormatter.dateFromString(dateAsString)!
-//        
-//        dateAsString = "2018-03-05 08:14:19"
-//        date2 = dateFormatter.dateFromString(dateAsString)!
-//        
-//        
-//        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date1, toDate: date2, options: NSCalendarOptions.init(rawValue: 0))
-//        
-//        print("The difference between dates is: \(diffDateComponents.year) years, \(diffDateComponents.month) months, \(diffDateComponents.day) days, \(diffDateComponents.hour) hours, \(diffDateComponents.minute) minutes, \(diffDateComponents.second) seconds")
         
         
     }
@@ -258,7 +248,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         newClientRef.setValue(["password": self.passwordField!.text!, "history": historyList, "default_photo": photoString, "start": self.startDate!, "flakes": 0])
 
         
-        
   
     
         let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
@@ -328,6 +317,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         drawerCon.openDrawerGestureModeMask = OpenDrawerGestureMode.BezelPanningCenterView
         drawerCon.closeDrawerGestureModeMask = CloseDrawerGestureMode.PanningCenterView
+        
+//        let endDate = NSDate()
+        let timeInterval = sdate.timeIntervalSinceNow * -1
+        print(timeInterval)
         
         self.presentViewController(drawerCon, animated: true, completion: nil)
     }

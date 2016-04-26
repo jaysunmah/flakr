@@ -16,6 +16,7 @@ class Flake {
     private var _flakeReason: String!
     private var _flakeFlaker: String!
     private var _flakeFlakee: String!
+//    private var _flakeLikes: [String]
     
     var flakeKey: String {
         return _flakeKey
