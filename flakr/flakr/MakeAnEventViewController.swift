@@ -115,20 +115,33 @@ class MakeAnEventViewController: UIViewController {
     }
     
     func saveFlake(sender: AnyObject) {
+        
+        
         clientRef.observeEventType(.Value, withBlock: {
             snapshot in
             if let somethingelse = snapshot.value[self.flakerField!.text!] {
                 if let something = snapshot.value[self.flakerField!.text!]! {
-                    if self.flakeReasonField != "" {
-                        
+                    if self.flakeReasonField!.text != "" {
+                        var currClientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users/" + self.flakerField!.text!)
                         // Build the new Joke.
                         // AnyObject is needed because of the votes of type Int.
+//                        clientRef.setValue(something!["flakes"] + 1)
                         
                         let newFlake: Dictionary<String, AnyObject> = [
                             "flaker": self.flakerField!.text!,
                             "flakee": self.flakeeField!.text!,
                             "reason": self.flakeReasonField!.text!
                         ]
+                        
+                        let newFlakesCount = something["flakes"] as! Int + 1
+                        
+                        print("<====>")
+                        print(newFlakesCount)
+                        
+                        print("updating...")
+                        currClientRef.setValue(["password": snapshot.value[self.flakerField!.text!]!!["password"]!!, "history": snapshot.value[self.flakerField!.text!]!!["history"]!!, "start": snapshot.value[self.flakerField!.text!]!!["start"]!!, "flakes": newFlakesCount, "default_photo": snapshot.value[self.flakerField!.text!]!!["default_photo"]!!])
+                        
+//                        updateFlakeCount(count: newFlakesCount)
                         
                         // Send it over to DataService to seal the deal.
                         
@@ -143,9 +156,12 @@ class MakeAnEventViewController: UIViewController {
                         self.flakerField!.text = ""
                     }
                 } else {
-                    self.signupErrorAlert("login error", message: "nonexistant user, user will show up with a default photo")
-                    if self.flakeReasonField != "" {
-                        
+                    
+                    print("this is being called again")
+                    print(self.flakeReasonField!.text)
+                    
+                    if self.flakeReasonField!.text != "" {
+                        self.signupErrorAlert("login error", message: "nonexistant user, user will show up with a default photo")
                         // Build the new Joke.
                         // AnyObject is needed because of the votes of type Int.
                         
@@ -177,6 +193,10 @@ class MakeAnEventViewController: UIViewController {
         
 
     }
+//    func updateFlakeCount(count: int) {
+//        
+//        currClientRef.updateChildValues(<#T##values: [NSObject : AnyObject]!##[NSObject : AnyObject]!#>)(["flakes": newFlakesCount])
+//    }
     
     func signupErrorAlert(title: String, message: String) {
         // Called upon signup error to let the user know signup didn't work.

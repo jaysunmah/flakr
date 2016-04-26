@@ -56,13 +56,14 @@ class MyCustomCell: UITableViewCell {
     }
     
     func commentAction() {
-        print("commented!")
+        print("commented")
+//        self.presentViewController(CommentsV, animated: true, completion: nil)
     }
     
     
     func addLabels() {
-        var options: [String] = [" flaked on ", " pussied out on ", " ditched "]
-        print(arc4random_uniform(UInt32(options.count)))
+        var options: [String] = [" flaked on ", " wussed out on ", " ditched ", " abandoned ", " forgot about "]
+//        print(arc4random_uniform(UInt32(options.count)))
         var randIndex: Int = Int(arc4random_uniform(UInt32(options.count)))
         
         flakerLabel.text = currFlake!.flakeFlaker + options[randIndex] + currFlake!.flakeFlakee

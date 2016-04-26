@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		023B46AD996C012EC96FFFD9 /* Pods_flakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313A840F6C37315BAF3D7E39 /* Pods_flakr.framework */; };
 		AB02DEB41CCD0F4900E8DAB8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02DEB31CCD0F4900E8DAB8 /* CustomTableViewCell.swift */; };
+		AB6623E21CD00D1A0073D884 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6623E11CD00D1A0073D884 /* CommentsViewController.swift */; };
 		AB793EBA1CCC756900967CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793EB91CCC756900967CC4 /* AppDelegate.swift */; };
 		AB793EBC1CCC756900967CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793EBB1CCC756900967CC4 /* ViewController.swift */; };
 		AB793EBF1CCC756900967CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB793EBD1CCC756900967CC4 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		313A840F6C37315BAF3D7E39 /* Pods_flakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED9BE0BDFCA3A9C163B12D7 /* Pods-flakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-flakr/Pods-flakr.release.xcconfig"; sourceTree = "<group>"; };
 		AB02DEB31CCD0F4900E8DAB8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AB6623E11CD00D1A0073D884 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		AB793EB61CCC756900967CC4 /* flakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB793EB91CCC756900967CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB793EBB1CCC756900967CC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				ABDDF2D11CCD782E00303A10 /* Client.swift */,
 				ABC1D8C41CCEA6810098966F /* DataService.swift */,
 				ABC1D8C61CCEB5250098966F /* Flake.swift */,
+				AB6623E11CD00D1A0073D884 /* CommentsViewController.swift */,
 				ABC1D8C21CCDE1690098966F /* Assets.xcassets */,
 			);
 			path = flakr;
@@ -307,6 +310,7 @@
 				AB02DEB41CCD0F4900E8DAB8 /* CustomTableViewCell.swift in Sources */,
 				ABDDF2D21CCD782E00303A10 /* Client.swift in Sources */,
 				AB793EBA1CCC756900967CC4 /* AppDelegate.swift in Sources */,
+				AB6623E21CD00D1A0073D884 /* CommentsViewController.swift in Sources */,
 				ABDDF2D81CCDB5AB00303A10 /* ProfileViewController.swift in Sources */,
 				ABDDF2D41CCD84AC00303A10 /* FlakeData.swift in Sources */,
 				ABC1D8C51CCEA6810098966F /* DataService.swift in Sources */,

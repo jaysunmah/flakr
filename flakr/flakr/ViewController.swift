@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var user_icon: UIImageView = UIImageView()
     
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
+    var startDate: String?
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
@@ -29,12 +30,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //automatically called when view is loaded
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.whiteColor()
+//        self.view.backgroundColor = UIColor.whiteColor()
         
-//        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
-//        backgroundImage.image = UIImage(named: "flaked")
-//        backgroundImage.alpha = 0.5
-//        self.view.insertSubview(backgroundImage, atIndex: 0)
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "flakr_white_bg")
+        backgroundImage.alpha = 0.9
+        self.view.insertSubview(backgroundImage, atIndex: 0)
         
 //        self.view.backgroundColor = UIColor.cyanColor()
         initializeSplashLabels()
@@ -58,7 +59,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         defaultPic.layer.borderWidth = 0;
         self.view.addSubview(defaultPic)
         
+        
+        let date = NSDate();
+        
+        var formatter = NSDateFormatter();
+        formatter.dateFormat = "MM-dd-yyyy";
+        startDate = formatter.stringFromDate(date);
+        
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        var formatter1 = NSDateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        dateAsString = "2015-10-08 14:25:37"
+//        date1 = dateFormatter.dateFromString(dateAsString)!
+//        
+//        dateAsString = "2018-03-05 08:14:19"
+//        date2 = dateFormatter.dateFromString(dateAsString)!
+//        
+//        
+//        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date1, toDate: date2, options: NSCalendarOptions.init(rawValue: 0))
+//        
+//        print("The difference between dates is: \(diffDateComponents.year) years, \(diffDateComponents.month) months, \(diffDateComponents.day) days, \(diffDateComponents.hour) hours, \(diffDateComponents.minute) minutes, \(diffDateComponents.second) seconds")
         
         
     }
@@ -81,14 +102,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         label = UILabel()
         label!.frame = CGRectMake(screenSize.width/2 - 100, 2 * screenSize.height/10, 200, screenSize.height/10)
         label!.text = "flakr"
+        label!.textColor = UIColor.blackColor()
         label!.font = UIFont(name: label!.font.fontName, size: 50)
         view.addSubview(label!)
         
         
         photoLabel = UILabel()
-        photoLabel!.backgroundColor = UIColor.clearColor()
-        photoLabel!.frame = CGRectMake(screenSize.width * 0.5 - 100, screenSize.height * 0.555,
-                                       200, screenSize.height * 0.1)
+//        photoLabel!.backgroundColor = UIColor.cyanColor()
+//        photoLabel!.alpha = 0.7
+        photoLabel!.frame = CGRectMake(screenSize.width * 0.5 - 100, screenSize.height * 0.57,
+                                       200, screenSize.height * 0.085)
         photoLabel!.text = "Pick a profile picture! Already a user? Just leave this blank!"
         photoLabel!.textColor = UIColor.blackColor()
         photoLabel!.numberOfLines = -1
@@ -101,8 +124,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func initializeSplashTextFields() {
         usernameField = UITextField()
         usernameField!.frame = CGRectMake(screenSize.width/2 - 100, screenSize.height * 0.3, 200, screenSize.height * 0.045)
-        usernameField!.placeholder = "Username:"
-        usernameField!.backgroundColor = UIColor.cyanColor()
+        usernameField!.placeholder = "Username"
+        usernameField!.backgroundColor = UIColor.init(red: 0.92, green: 0.92, blue: 0.95, alpha: 0.7)
         usernameField!.autocapitalizationType = UITextAutocapitalizationType.None
         view.addSubview(usernameField!)
         
@@ -110,7 +133,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         passwordField!.frame = CGRectMake(screenSize.width/2 - 100, screenSize.height * 0.37, 200, screenSize.height * 0.045)
         passwordField!.placeholder = "Password"
         passwordField!.secureTextEntry = true
-        passwordField!.backgroundColor = UIColor.cyanColor()
+        passwordField!.backgroundColor = UIColor.init(red: 0.92, green: 0.92, blue: 0.95, alpha: 0.7)
         passwordField!.autocapitalizationType = UITextAutocapitalizationType.None
         view.addSubview(passwordField!)
     }
@@ -128,19 +151,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let button: UIButton = UIButton()
         button.frame = CGRectMake(screenSize.width/2 - 114, screenSize.height * 0.65, 100, screenSize.height * 0.045)
-//        button.backgroundColor = UIColor.blueColor()
+//        button.backgroundColor = UIColor.cyanColor()
         button.setTitle("Register!", forState: UIControlState.Normal)
         button.addTarget(self, action: "register:", forControlEvents: UIControlEvents.TouchUpInside)
-        button.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         view.addSubview(button)
         
         
         let loginButton: UIButton = UIButton()
         loginButton.frame = CGRectMake(screenSize.width/2 + 12, screenSize.height * 0.65, 100, screenSize.height * 0.045)
-        loginButton.backgroundColor = UIColor.whiteColor()
+//        loginButton.backgroundColor = UIColor.cyanColor()
         loginButton.setTitle("Log in!", forState: UIControlState.Normal)
         loginButton.addTarget(self, action: "login:", forControlEvents: UIControlEvents.TouchUpInside)
-        loginButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        loginButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         loginButton.alpha = 0.9
         view.addSubview(loginButton)
         
@@ -231,10 +254,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let photoString:String = (photoData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength))!
 
         let newClientRef = clientRef.childByAppendingPath(usernameField!.text)
-        print("size")
-        print(photoString.utf8.count)
-        
-        newClientRef.setValue(["password": self.passwordField!.text!, "history": historyList, "default_photo": photoString])
+
+        newClientRef.setValue(["password": self.passwordField!.text!, "history": historyList, "default_photo": photoString, "start": self.startDate!, "flakes": 0])
 
         
         
@@ -242,7 +263,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
         let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
     
-        let currentClient = Client(username: usernameField!.text!, password: passwordField!.text!, history: ["lol"], photo: photoString )
+        let currentClient = Client(username: usernameField!.text!, password: passwordField!.text!, history: historyList, photo: photoString, start: self.startDate!, flakes: 0)
         
         vc.username = usernameField!.text!
     
@@ -270,7 +291,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         let imageStr = password["default_photo"] as! String
                         let usernameStr = self.usernameField!.text!
                         let historyDat = password["history"] as! [String]
-                        self.successfulLogin(usernameStr, pass: passcode, img: imageStr, hist: historyDat)
+                        let startDat = password["start"] as! String
+                        let flakesDat = password["flakes"] as! Int
+                        
+                        self.successfulLogin(usernameStr, pass: passcode, img: imageStr, hist: historyDat, start: startDat, flakes: flakesDat)
                     } else {
                         self.signupErrorAlert("login error", message: "incorrect password, try again")
                     }
@@ -285,11 +309,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
 
-    func successfulLogin(username: String, pass: String, img: String, hist: [String]) {
+    func successfulLogin(username: String, pass: String, img: String, hist: [String], start: String, flakes: Int) {
         
-//        let photoString: String = encodeImageToString(defaultPic.image!)
-        
-        let currentClient = Client(username: username, password: pass, history: hist, photo: img )
+        let currentClient = Client(username: username, password: pass, history: hist, photo: img, start: start, flakes: flakes)
         
         let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
         

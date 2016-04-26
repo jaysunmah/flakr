@@ -10,7 +10,7 @@
 import UIKit
 import Firebase
 
-class ProfileViewController: UIViewController {
+class CommentsViewController: UIViewController {
     
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
     
@@ -36,11 +36,11 @@ class ProfileViewController: UIViewController {
             self.addLabels()
         })
         
-//        print("FLAKES")
-//        print(self.numFlakes)
+        //        print("FLAKES")
+        //        print(self.numFlakes)
         
         
-//        addLabels()
+        //        addLabels()
         
         
         

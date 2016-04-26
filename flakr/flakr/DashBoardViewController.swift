@@ -16,9 +16,8 @@ class DashBoardViewController: UITableViewController {
     var username: String?
     var currClient: Client?
     var dashboard_table: UITableView?
-    var data: [String] = ["hello", "world", "a","b","c","d","e","f","g","hello", "world", "a","b","c","d","e","f","g"]
+    
     let cellReuseIdendifier = "cell"    
-
 
     
     var flakeData = [Flake]()
@@ -94,7 +93,7 @@ class DashBoardViewController: UITableViewController {
         cell.currFlake = flakeData[indexPath.row]
         cell.cellWidth = screenSize.width
         cell.cellHeight = screenSize.height / 7
-        cell.addButtons()
+        cell.addButtons() //currently disabled, implement later in the future
         cell.addLabels()
         cell.addImages()
         return cell

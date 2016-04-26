@@ -13,11 +13,17 @@ class Client {
     var password: String
     var history: [String]
     var photo: String
-    init(username: String, password: String, history: [String], photo: String) {
+    var start: String
+    var flakes: Int
+    
+    
+    init(username: String, password: String, history: [String], photo: String, start: String, flakes: Int) {
         self.username = username
         self.password = password
         self.history = history
         self.photo = photo
+        self.start = start
+        self.flakes = flakes
     }
     
 }
