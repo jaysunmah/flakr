@@ -15,6 +15,7 @@ class MenuTableViewController: UITableViewController {
     var data: [String] = ["dashboard", "profile", "rate an event", "log out"]
     let cellReuseIdendifier = "cell"
     
+    var currClient: Client?
     var dashboardVC: DashBoardViewController?
     var profileVC: ProfileViewController?
     
@@ -68,12 +69,20 @@ class MenuTableViewController: UITableViewController {
     func navigateViews(selectedView: String) {
         //call new navigations
         print(selectedView)
+        print(currClient!.username)
+        let tempMakeEventVC = MakeAnEventViewController()
+        tempMakeEventVC.currClient = currClient
+        
+        let profileVC = ProfileViewController()
+        profileVC.currFlake = currClient
+        
+        
         if (selectedView == "dashboard") {
         evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: DashBoardViewController()), withCloseAnimation: true, completion: nil)
         } else  if (selectedView == "profile"){
-        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: ProfileViewController()), withCloseAnimation: true, completion: nil)
+        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: profileVC), withCloseAnimation: true, completion: nil)
         } else if (selectedView == "rate an event") {
-        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: MakeAnEventViewController()), withCloseAnimation: true, completion: nil)
+        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: tempMakeEventVC), withCloseAnimation: true, completion: nil)
         } else if (selectedView == "log out") {
             evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: ViewController()), withCloseAnimation: true, completion: nil)
         }

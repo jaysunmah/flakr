@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 //class MakeAnEventViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 class MakeAnEventViewController: UIViewController {
 
+    var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
+    
     var eventTitle: UILabel?
     var flakerLabel: UILabel?
     var flakeeLabel: UILabel?
@@ -20,6 +23,7 @@ class MakeAnEventViewController: UIViewController {
     var flakerField: UITextField?
     var flakeeField: UITextField?
     var flakeReasonField: UITextField?
+    var currClient: Client?
     
 //    let pickerData = ["flaked on", "ditched", "abandoned", "left", "wussed out"]
     let screenSize: CGRect = UIScreen.mainScreen().bounds
@@ -36,6 +40,8 @@ class MakeAnEventViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Rate an event"
         self.view.backgroundColor = UIColor.whiteColor()
+        print("ITS LIST")
+        print(currClient!.username)
         
 //        myPicker.delegate = self
 //        myPicker.dataSource = self
@@ -60,14 +66,14 @@ class MakeAnEventViewController: UIViewController {
         flakerLabel!.font = UIFont(name: flakerLabel!.font.fontName, size: 20)
         view.addSubview(flakerLabel!)
         
-        flakeeLabel = UILabel()
-        flakeeLabel!.frame = CGRectMake(screenSize.height * 0.08, screenSize.height * 0.28, 200, screenSize.height * 0.045)
-        flakeeLabel!.text = "Flakee"
-        flakeeLabel!.font = UIFont(name: flakeeLabel!.font.fontName, size: 20)
-        view.addSubview(flakeeLabel!)
+//        flakeeLabel = UILabel()
+//        flakeeLabel!.frame = CGRectMake(screenSize.height * 0.08, screenSize.height * 0.28, 200, screenSize.height * 0.045)
+//        flakeeLabel!.text = "Flakee"
+//        flakeeLabel!.font = UIFont(name: flakeeLabel!.font.fontName, size: 20)
+//        view.addSubview(flakeeLabel!)
 
         reasonLabel = UILabel()
-        reasonLabel!.frame = CGRectMake(screenSize.height * 0.08, screenSize.height * 0.36, 200, screenSize.height * 0.045)
+        reasonLabel!.frame = CGRectMake(screenSize.height * 0.08, screenSize.height * 0.30, 200, screenSize.height * 0.045)
         reasonLabel!.text = "Reason"
         reasonLabel!.font = UIFont(name: reasonLabel!.font.fontName, size: 20)
         view.addSubview(reasonLabel!)
@@ -80,16 +86,19 @@ class MakeAnEventViewController: UIViewController {
         flakerField!.frame = CGRectMake(screenSize.height * 0.2, screenSize.height * 0.2, 200, screenSize.height * 0.045)
         flakerField!.placeholder = "Flaker"
         flakerField!.backgroundColor = UIColor.cyanColor()
+        flakerField!.autocapitalizationType = UITextAutocapitalizationType.None
         view.addSubview(flakerField!)
         
         flakeeField = UITextField()
         flakeeField!.frame = CGRectMake(screenSize.height * 0.2, screenSize.height * 0.28, 200, screenSize.height * 0.045)
         flakeeField!.placeholder = "Flakee"
         flakeeField!.backgroundColor = UIColor.cyanColor()
-        view.addSubview(flakeeField!)
+        flakeeField!.autocapitalizationType = UITextAutocapitalizationType.None
+        flakeeField!.text = currClient!.username
+//        view.addSubview(flakeeField!)
         
         flakeReasonField = UITextField()
-        flakeReasonField!.frame = CGRectMake(screenSize.height * 0.2, screenSize.height * 0.36, 200, screenSize.height * 0.045)
+        flakeReasonField!.frame = CGRectMake(screenSize.height * 0.2, screenSize.height * 0.30, 200, screenSize.height * 0.045)
         flakeReasonField!.placeholder = "Reason"
         flakeReasonField!.backgroundColor = UIColor.cyanColor()
         flakeReasonField!.autocapitalizationType = UITextAutocapitalizationType.None
@@ -106,33 +115,92 @@ class MakeAnEventViewController: UIViewController {
     }
     
     func saveFlake(sender: AnyObject) {
+        clientRef.observeEventType(.Value, withBlock: {
+            snapshot in
+            if let somethingelse = snapshot.value[self.flakerField!.text!] {
+                if let something = snapshot.value[self.flakerField!.text!]! {
+                    if self.flakeReasonField != "" {
+                        
+                        // Build the new Joke.
+                        // AnyObject is needed because of the votes of type Int.
+                        
+                        let newFlake: Dictionary<String, AnyObject> = [
+                            "flaker": self.flakerField!.text!,
+                            "flakee": self.flakeeField!.text!,
+                            "reason": self.flakeReasonField!.text!
+                        ]
+                        
+                        // Send it over to DataService to seal the deal.
+                        
+                        DataService.dataService.createNewFlake(newFlake)
+                        
+                        if let navController = self.navigationController {
+                            navController.popViewControllerAnimated(true)
+                        }
+
+                        self.flakeReasonField!.text = ""
+//                        self.flakeeField!.text = ""
+                        self.flakerField!.text = ""
+                    }
+                } else {
+                    self.signupErrorAlert("login error", message: "nonexistant user, user will show up with a default photo")
+                    if self.flakeReasonField != "" {
+                        
+                        // Build the new Joke.
+                        // AnyObject is needed because of the votes of type Int.
+                        
+                        let newFlake: Dictionary<String, AnyObject> = [
+                            "flaker": self.flakerField!.text!,
+                            "flakee": self.flakeeField!.text!,
+                            "reason": self.flakeReasonField!.text!
+                        ]
+                        
+                        // Send it over to DataService to seal the deal.
+                        
+                        DataService.dataService.createNewFlake(newFlake)
+                        
+                        if let navController = self.navigationController {
+                            navController.popViewControllerAnimated(true)
+                        }
+                        
+                        self.flakeReasonField!.text = ""
+                        //                        self.flakeeField!.text = ""
+                        self.flakerField!.text = ""
+                    }
+                }
+            } else {
+                self.signupErrorAlert("login error", message: "nonexistant user, try again")            }
+            
+        })
         
         let flakeReason = flakeReasonField!.text
         
-        if flakeReason != "" {
-            
-            // Build the new Joke.
-            // AnyObject is needed because of the votes of type Int.
-            
-            let newFlake: Dictionary<String, AnyObject> = [
-                "flaker": flakerField!.text!,
-                "flakee": flakeeField!.text!,
-                "reason": flakeReasonField!.text!
-            ]
-            
-            // Send it over to DataService to seal the deal.
-            
-            DataService.dataService.createNewFlake(newFlake)
-            
-            if let navController = self.navigationController {
-                navController.popViewControllerAnimated(true)
-            }
-            print("added")
-            flakeReasonField!.text = ""
-            flakeeField!.text = ""
-            flakerField!.text = ""
-        }
+
     }
+    
+    func signupErrorAlert(title: String, message: String) {
+        // Called upon signup error to let the user know signup didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func register(sender: AnyObject) {
+        clientRef.observeEventType(.Value, withBlock: {
+            snapshot in
+            if let somethingelse = snapshot.value[self.flakerField!.text!] {
+                if let something = snapshot.value[self.flakerField!.text!]! {
+                    //do something here, it's valid
+                } else {
+                    self.signupErrorAlert("login error", message: "nonexistant user, try again")
+                }
+            } else {
+                self.signupErrorAlert("login error", message: "nonexistant user, try again")            }
+            
+        })
+    }
+    
     
 //    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        print(pickerData[row])

@@ -8,18 +8,20 @@
 //
 
 import UIKit
+import Firebase
 
 class DashBoardViewController: UITableViewController {
     
     var label: UILabel?
     var username: String?
+    var currClient: Client?
     var dashboard_table: UITableView?
     var data: [String] = ["hello", "world", "a","b","c","d","e","f","g","hello", "world", "a","b","c","d","e","f","g"]
     let cellReuseIdendifier = "cell"    
 
 
     
-    var flakeData: [FlakeData] = [FlakeData(flaker: "Wilson", flakee: "Jason", timeStamp: 5, reason: "Amie wouldn't let me"), FlakeData(flaker: "Ajay", flakee: "Jason", timeStamp: 5, reason: "No money"), FlakeData(flaker: "Wilson", flakee: "Jason", timeStamp: 5, reason: "Because I always flake")]
+    var flakeData = [Flake]()
 
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
@@ -28,21 +30,45 @@ class DashBoardViewController: UITableViewController {
         super.viewDidLoad()
 //        initializeSplashLabels()
         self.title = "Dashboard"
-        var b = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: Selector("sayHello"))
+        var b = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: Selector("reloadTables"))
         self.navigationItem.rightBarButtonItem = b
-
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
         tableView.registerClass(MyCustomCell.self, forCellReuseIdentifier: cellReuseIdendifier)
-        
         tableView.dataSource = self
         tableView.delegate = self
 
-        //
+        DataService.dataService.FLAKE_REF.observeEventType(.Value, withBlock: { snapshot in
+            
+            // The snapshot is a current look at our jokes data.
+            
+            print(snapshot.value)
+            
+            self.flakeData = []
+            
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                
+                for snap in snapshots {
+                    
+                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let flake = Flake(key: key, dictionary: postDictionary)
+                        
+                        // Items are returned chronologically, but it's more fun with the newest jokes first.
+                        
+                        self.flakeData.insert(flake, atIndex: 0)
+                    }
+                }
+                
+            }
+            
+            // Be sure that the tableView updates when there is new data.
+            
+            self.tableView.reloadData()
+        })
     }
     
-    func sayHello() {
-        print("hello")
+    func reloadTables() {
+        self.tableView.reloadData()
     }
     
     func initializeSplashLabels() {
