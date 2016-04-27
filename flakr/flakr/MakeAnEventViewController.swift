@@ -134,9 +134,7 @@ class MakeAnEventViewController: UIViewController {
                         ]
                         
                         let newFlakesCount = something["flakes"] as! Int + 1
-                        
-                        print("<====>")
-                        print(newFlakesCount)
+
                         
                         print("updating...")
                         currClientRef.setValue(["password": snapshot.value[self.flakerField!.text!]!!["password"]!!, "history": snapshot.value[self.flakerField!.text!]!!["history"]!!, "start": snapshot.value[self.flakerField!.text!]!!["start"]!!, "flakes": newFlakesCount, "default_photo": snapshot.value[self.flakerField!.text!]!!["default_photo"]!!])
@@ -168,7 +166,8 @@ class MakeAnEventViewController: UIViewController {
                         let newFlake: Dictionary<String, AnyObject> = [
                             "flaker": self.flakerField!.text!,
                             "flakee": self.flakeeField!.text!,
-                            "reason": self.flakeReasonField!.text!
+                            "reason": self.flakeReasonField!.text!,
+                            "likes": ["~NULL~"]
                         ]
                         
                         // Send it over to DataService to seal the deal.

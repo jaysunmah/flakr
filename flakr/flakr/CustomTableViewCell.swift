@@ -20,6 +20,8 @@ class MyCustomCell: UITableViewCell {
     
     let likeButton = UIButton()
     let commentButton = UIButton()
+    
+    var numLikes: Int?
 
     @IBAction func firstButton(sender: UIButton) {
         sender.titleLabel?.textColor  = UIColor.redColor()
@@ -53,7 +55,21 @@ class MyCustomCell: UITableViewCell {
     
     func likeAction() {
         print("liked!")
+        
+        DataService.dataService.FLAKE_REF.observeEventType(.Value, withBlock: { snapshot in
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                
+                for snap in snapshots {
+                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        if (postDictionary["flaker"] as! String == self.currFlake!.flakeFlaker) {
+                            print(snapshot.value)
+                        }
+                     }
+                }
+            }
+        })
     }
+
     
     func commentAction() {
         print("commented")

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "flakr/CustomTableViewCell.swift"
-            timestampString = "483397096.483734"
+            timestampString = "483411762.193092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "addLabels()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "flakr/CustomTableViewCell.swift"
-            timestampString = "483397096.483734"
+            timestampString = "483411762.193092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addLabels()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "flakr/ProfileViewController.swift"
-            timestampString = "483406872.19467"
+            timestampString = "483412835.674947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "addImages_helper(_:photo:)"
             landmarkType = "5">
          </BreakpointContent>

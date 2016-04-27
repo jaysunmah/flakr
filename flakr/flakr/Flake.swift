@@ -16,7 +16,7 @@ class Flake {
     private var _flakeReason: String!
     private var _flakeFlaker: String!
     private var _flakeFlakee: String!
-//    private var _flakeLikes: [String]
+    private var _flakeLikes: [String]!
     
     var flakeKey: String {
         return _flakeKey
@@ -33,6 +33,9 @@ class Flake {
     var flakeFlakee: String {
         return _flakeFlakee
     }
+    var flakeLikes: [String] {
+        return _flakeLikes
+    }
     
     // Initialize the new Joke
     
@@ -47,6 +50,12 @@ class Flake {
         
         if let flakee = dictionary["flakee"] as? String {
             self._flakeFlakee = flakee
+        }
+        
+        if let likes = dictionary["likes"] as? [String] {
+            self._flakeLikes = likes
+        } else {
+            self._flakeLikes = ["nil"]
         }
         
         if let reason = dictionary["reason"] as? String {

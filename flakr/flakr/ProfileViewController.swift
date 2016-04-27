@@ -12,12 +12,16 @@ import Firebase
 
 class ProfileViewController: UIViewController {
     
+    var numOfFlakes = 4
+    var freqOfFlakes = 3600
+    
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
     
     var user_icon: UIImageView = UIImageView()
     var label: UILabel?
     var dateLabel: UILabel?
     var flakesLabel: UILabel?
+    var flakesRatingLabel: UILabel?
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     var currFlake: Client?
@@ -35,14 +39,7 @@ class ProfileViewController: UIViewController {
             self.numFlakes = snapshot.value[self.currFlake!.username]!!["flakes"]! as! Int
             self.addLabels()
         })
-        
-//        print("FLAKES")
-//        print(self.numFlakes)
-        
-        
-//        addLabels()
-        
-        
+
         
     }
     
@@ -71,6 +68,7 @@ class ProfileViewController: UIViewController {
         var hours = Int((timeInterval / (3600))) % 24
         var minutes = Int((timeInterval / (60))) % 60
         var seconds = Int(timeInterval) % 60
+        
 //        print(timeInterval)
         
         
@@ -83,9 +81,24 @@ class ProfileViewController: UIViewController {
         flakesLabel = UILabel()
         flakesLabel!.frame = CGRect(x: screenSize.width * 0.11, y: screenSize.height * 0.49, width: screenSize.width * 0.7, height: 50)
         flakesLabel!.text = "Flakes: " + String(numFlakes)
-        flakesLabel!.font = UIFont(name: label!.font.fontName, size: 20)
+        flakesLabel!.font = UIFont(name: flakesLabel!.font.fontName, size: 20)
         view.addSubview(flakesLabel!)
         
+        var expectedFlakesPerHour = Double(numFlakes) * (Double(freqOfFlakes) / timeInterval)
+        var chancesOfFlaking = expectedFlakesPerHour / Double(numOfFlakes)
+        var roundedChances = Int(chancesOfFlaking * 10000)
+        var notRounded = Double(roundedChances) / 100
+        
+        if(notRounded > 100) {
+            notRounded = 100
+        }
+        
+        
+        flakesRatingLabel = UILabel()
+        flakesRatingLabel!.frame = CGRect(x: screenSize.width * 0.11, y: screenSize.height * 0.54, width: screenSize.width * 0.7, height: 50)
+        flakesRatingLabel!.text = "Chances of flaking: " + String(notRounded) + "%"
+        flakesRatingLabel!.font = UIFont(name: flakesRatingLabel!.font.fontName, size: 20)
+        view.addSubview(flakesRatingLabel!)
         
         
     }
