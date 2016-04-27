@@ -57,6 +57,11 @@ class CommentsViewController: UIViewController {
         
         dateLabel = UILabel()
         dateLabel!.frame = CGRect(x: screenSize.width * 0.11, y: screenSize.height * 0.44, width: screenSize.width * 0.7, height: 50)
+        
+//        var formatter = NSDateFormatter();
+//        formatter.dateFormat = "MM-dd-yyyy";
+//        let startDate = formatter.stringFromDate(currFlake!.start);
+        
         dateLabel!.text = "Date joined: " + currFlake!.start
         dateLabel!.font = UIFont(name: label!.font.fontName, size: 20)
         view.addSubview(dateLabel!)

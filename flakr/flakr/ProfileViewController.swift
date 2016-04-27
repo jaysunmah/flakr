@@ -57,10 +57,27 @@ class ProfileViewController: UIViewController {
         
         dateLabel = UILabel()
         dateLabel!.frame = CGRect(x: screenSize.width * 0.11, y: screenSize.height * 0.44, width: screenSize.width * 0.7, height: 50)
-        dateLabel!.text = "Date joined: " + currFlake!.start
-        dateLabel!.font = UIFont(name: label!.font.fontName, size: 20)
-        view.addSubview(dateLabel!)
         
+        var formatter = NSDateFormatter();
+        formatter .dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        let convertedBack = formatter.dateFromString(currFlake!.start)
+        
+        let timeInterval = convertedBack!.timeIntervalSinceNow * -1
+        
+//        print("time elapsed")
+        
+        var days = Int((timeInterval / (3600 * 24)))
+        var hours = Int((timeInterval / (3600))) % 24
+        var minutes = Int((timeInterval / (60))) % 60
+        var seconds = Int(timeInterval) % 60
+//        print(timeInterval)
+        
+        
+//        dateLabel!.text = "Days joined: " + String(Int((timeInterval / (3600 * 24))+1))
+        dateLabel!.text = "Days joined: D:" + String(days) + " H:" + String(hours) + " Min:" + String(minutes) + " S:" + String(seconds)
+        dateLabel!.font = UIFont(name: label!.font.fontName, size: 15)
+        view.addSubview(dateLabel!)
         
         
         flakesLabel = UILabel()
@@ -68,6 +85,9 @@ class ProfileViewController: UIViewController {
         flakesLabel!.text = "Flakes: " + String(numFlakes)
         flakesLabel!.font = UIFont(name: label!.font.fontName, size: 20)
         view.addSubview(flakesLabel!)
+        
+        
+        
     }
     
     func addImages() {
@@ -99,7 +119,7 @@ class ProfileViewController: UIViewController {
         //        user_icon = UIImageView(image: decodeStringToImage(encodeImageToString(image)))
         
         //        user_icon.contentMode = UIViewContentMode.ScaleAspectFit
-        user_icon.frame = CGRect(x: screenSize.width / 2 - 75, y: 90, width: 150, height: 150)
+        user_icon.frame = CGRect(x: screenSize.width / 2 - 75, y: screenSize.height * 0.12, width: 150, height: 150)
         user_icon.layer.cornerRadius = user_icon.frame.size.height / 2
         user_icon.layer.masksToBounds = true
         user_icon.layer.borderWidth = 0;

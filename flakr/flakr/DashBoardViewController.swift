@@ -40,7 +40,7 @@ class DashBoardViewController: UITableViewController {
             
             // The snapshot is a current look at our jokes data.
             
-            print(snapshot.value)
+//            print(snapshot.value)
             
             self.flakeData = []
             

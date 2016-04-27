@@ -21,7 +21,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var user_icon: UIImageView = UIImageView()
     
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
+    
+    let date = NSDate();
+    
+    var formatter = NSDateFormatter();
+    
     var startDate: String?
+    
+    
+    
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
@@ -55,21 +63,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let default_icon: UIImage = UIImage(named: "profile")!
         
         defaultPic = UIImageView(image: default_icon)
-        defaultPic.frame = CGRect(x: 120, y: 320, width: 85, height: 85)
+        defaultPic.frame = CGRect(x: screenSize.width * 0.5 - screenSize.height * 0.06, y: screenSize.height * 0.44, width: screenSize.height * 0.12, height: screenSize.height * 0.12)
         defaultPic.layer.cornerRadius = defaultPic.frame.size.height / 2
         defaultPic.layer.masksToBounds = true
         defaultPic.layer.borderWidth = 0;
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("loadImageButtonTapped:"))
+        defaultPic.userInteractionEnabled = true
+        defaultPic.addGestureRecognizer(tapGestureRecognizer)
         self.view.addSubview(defaultPic)
         
-        
-        let date = NSDate();
-        
-        var formatter = NSDateFormatter();
-        formatter.dateFormat = "MM-dd-yyyy";
+
+        formatter .dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         startDate = formatter.stringFromDate(date);
         
 
-        
+//        print(startDate)
         
         
     }
@@ -136,11 +144,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraButton.addTarget(self, action: "loadImageButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         cameraButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         cameraButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Highlighted)
-        view.addSubview(cameraButton)
+//        view.addSubview(cameraButton)
         
         
         let button: UIButton = UIButton()
-        button.frame = CGRectMake(screenSize.width/2 - 114, screenSize.height * 0.65, 100, screenSize.height * 0.045)
+        button.frame = CGRectMake(screenSize.width/2 - 114, screenSize.height * 0.7, 100, screenSize.height * 0.045)
 //        button.backgroundColor = UIColor.cyanColor()
         button.setTitle("Register!", forState: UIControlState.Normal)
         button.addTarget(self, action: "register:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -149,7 +157,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         let loginButton: UIButton = UIButton()
-        loginButton.frame = CGRectMake(screenSize.width/2 + 12, screenSize.height * 0.65, 100, screenSize.height * 0.045)
+        loginButton.frame = CGRectMake(screenSize.width/2 + 12, screenSize.height * 0.7, 100, screenSize.height * 0.045)
 //        loginButton.backgroundColor = UIColor.cyanColor()
         loginButton.setTitle("Log in!", forState: UIControlState.Normal)
         loginButton.addTarget(self, action: "login:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -175,7 +183,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             
             defaultPic = UIImageView(image: pickedImage)
-            defaultPic.frame = CGRect(x: 120, y: 320, width: 85, height: 85)
+            defaultPic.frame = CGRect(x: screenSize.width * 0.5 - screenSize.height * 0.06, y: screenSize.height * 0.44, width: screenSize.height * 0.12, height: screenSize.height * 0.12)
             defaultPic.layer.cornerRadius = defaultPic.frame.size.height / 2
             defaultPic.layer.masksToBounds = true
             defaultPic.layer.borderWidth = 0;
@@ -244,7 +252,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let photoString:String = (photoData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength))!
 
         let newClientRef = clientRef.childByAppendingPath(usernameField!.text)
-
+        
+//        startDate = NSDate()
+        
         newClientRef.setValue(["password": self.passwordField!.text!, "history": historyList, "default_photo": photoString, "start": self.startDate!, "flakes": 0])
 
         
@@ -306,11 +316,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         vc.username = usernameField!.text!
         
-        print(currentClient.username)
+
+//        print(currentClient.username)
         
         let menuTable = MenuTableViewController()
         menuTable.dashboardVC = vc;
         menuTable.currClient = currentClient
+        
         
         
         let drawerCon = DrawerController(centerViewController: UINavigationController(rootViewController: vc),leftDrawerViewController: menuTable)
@@ -318,9 +330,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         drawerCon.openDrawerGestureModeMask = OpenDrawerGestureMode.BezelPanningCenterView
         drawerCon.closeDrawerGestureModeMask = CloseDrawerGestureMode.PanningCenterView
         
-//        let endDate = NSDate()
-        let timeInterval = sdate.timeIntervalSinceNow * -1
-        print(timeInterval)
+
         
         self.presentViewController(drawerCon, animated: true, completion: nil)
     }
