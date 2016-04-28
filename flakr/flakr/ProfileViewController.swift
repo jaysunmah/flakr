@@ -56,10 +56,10 @@ class ProfileViewController: UIViewController {
     
     func addLabels() {
         label = UILabel()
-        label!.frame = CGRect(x: screenSize.width/2 - 100, y: screenSize.height * 0.35, width: 200, height: 50)
+        label!.frame = CGRect(x: screenSize.width * 0.1, y: screenSize.height * 0.35, width: screenSize.width * 0.8, height: 50)
         label!.text = currFlake!.username
         label!.textAlignment = NSTextAlignment.Center
-        label!.font = UIFont(name: label!.font.fontName, size: 50)
+        label!.font = UIFont(name: label!.font.fontName, size: 45)
         view.addSubview(label!)
         
         

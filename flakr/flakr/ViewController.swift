@@ -181,6 +181,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         view.addSubview(loginButton)
         
 
+        let helpButton: UIButton = UIButton()
+        helpButton.frame = CGRectMake(screenSize.width/2 - 128, screenSize.height * 0.75, 100, screenSize.height * 0.045)
+        //        button.backgroundColor = UIColor.cyanColor()
+        helpButton.setTitle("Help!", forState: UIControlState.Normal)
+        helpButton.addTarget(self, action: "getHelp:", forControlEvents: UIControlEvents.TouchUpInside)
+        helpButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        view.addSubview(helpButton)
+        
+        
     }
     
     func loadImageButtonTapped(sender: UIButton) {
@@ -189,7 +198,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    
+    func getHelp(sender: AnyObject) {
+        self.signupErrorAlert("Welcome!", message: "Hi, and welcome to Flakr! This is a developmental app used to test basic social media interactions. If you are a new user, type in a username, password, and tap on the defualt photo to select a new user profile picture. If you are a returning user, simply type in your username and password and log in. On the dashboard, swipe right from the very corner of the left side of the screen to access the menu, and swipe down on the dashboard to reload data")
+    }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -283,6 +294,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let currentClient = Client(username: usernameField!.text!, password: passwordField!.text!, history: historyList, photo: photoString, start: self.startDate!, flakes: 0)
         
         vc.username = usernameField!.text!
+        vc.currClient = currentClient
     
         let menuTable = MenuTableViewController()
         menuTable.dashboardVC = vc;
@@ -337,9 +349,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
         
         vc.username = usernameField!.text!
+        vc.currClient = currentClient
         
-
-//        print(currentClient.username)
         
         let menuTable = MenuTableViewController()
         menuTable.dashboardVC = vc;

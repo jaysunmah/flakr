@@ -87,9 +87,15 @@ class MenuTableViewController: UITableViewController {
         let profileVC = ProfileViewController()
         profileVC.currFlake = currClient
         
+        let vc:DashBoardViewController = (UIStoryboard(name: "Main", bundle: nil)).instantiateViewControllerWithIdentifier("Dashboard") as!DashBoardViewController
+        
+        //        print("username is now " + username!)
+        vc.username = currClient!.username
+        vc.currClient = currClient!
+        
         
         if (selectedView == "dashboard") {
-        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: DashBoardViewController()), withCloseAnimation: true, completion: nil)
+        evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: vc), withCloseAnimation: true, completion: nil)
         } else  if (selectedView == "profile"){
         evo_drawerController?.setCenterViewController(UINavigationController(rootViewController: profileVC), withCloseAnimation: true, completion: nil)
         } else if (selectedView == "rate an event") {
