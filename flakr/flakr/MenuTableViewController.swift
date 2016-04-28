@@ -11,6 +11,17 @@ import UIKit
 import DrawerController
 class MenuTableViewController: UITableViewController {
     
+    
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
     var dashboard_table: UITableView?
     var data: [String] = ["dashboard", "profile", "rate an event", "log out"]
     let cellReuseIdendifier = "cell"

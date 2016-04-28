@@ -12,6 +12,17 @@ import Firebase
 //class MakeAnEventViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 class MakeAnEventViewController: UIViewController {
 
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
+    
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
     
     var eventTitle: UILabel?
@@ -51,6 +62,13 @@ class MakeAnEventViewController: UIViewController {
         addLabels()
         addButtons()
 //        view.addSubview(myPicker)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func addLabels() {

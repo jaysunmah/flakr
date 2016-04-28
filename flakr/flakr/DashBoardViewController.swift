@@ -12,6 +12,15 @@ import Firebase
 
 class DashBoardViewController: UITableViewController {
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
     var label: UILabel?
     var username: String?
     var currClient: Client?
@@ -29,12 +38,13 @@ class DashBoardViewController: UITableViewController {
         super.viewDidLoad()
 //        initializeSplashLabels()
         self.title = "Dashboard"
-        var b = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: Selector("reloadTables"))
-        self.navigationItem.rightBarButtonItem = b
+//        var b = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: Selector("reloadTables"))
+//        self.navigationItem.rightBarButtonItem = b
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.registerClass(MyCustomCell.self, forCellReuseIdentifier: cellReuseIdendifier)
         tableView.dataSource = self
         tableView.delegate = self
+        self.tableView.scrollEnabled = false
 
         DataService.dataService.FLAKE_REF.observeEventType(.Value, withBlock: { snapshot in
             
@@ -57,6 +67,9 @@ class DashBoardViewController: UITableViewController {
                         self.flakeData.insert(flake, atIndex: 0)
                     }
                 }
+                while (self.flakeData.count > 6) {
+                    self.flakeData.removeAtIndex(self.flakeData.count - 1)
+                }
                 
             }
             
@@ -67,7 +80,13 @@ class DashBoardViewController: UITableViewController {
     }
     
     func reloadTables() {
-        self.tableView.reloadData()
+        
+        let menuTable = MenuTableViewController()
+//        menuTable.dashboardVC = vc;
+        menuTable.currClient = currClient
+        
+        self.presentViewController(menuTable, animated: true, completion: nil)
+//        self.tableView.reloadData()
     }
     
     func initializeSplashLabels() {

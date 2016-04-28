@@ -12,6 +12,17 @@ import Firebase
 
 class ProfileViewController: UIViewController {
     
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
+    
     var numOfFlakes = 4
     var freqOfFlakes = 3600
     

@@ -2,6 +2,8 @@ import UIKit
 import Firebase
 
 class MyCustomCell: UITableViewCell {
+    
+    
     var ref = Firebase(url:"https://incandescent-heat-1881.firebaseio.com")
     var clientRef = Firebase(url:"https://incandescent-heat-1881.firebaseio.com/users")
     

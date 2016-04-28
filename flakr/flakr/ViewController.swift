@@ -13,6 +13,15 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
     var label: UILabel?
     var photoLabel: UILabel?
     
@@ -79,7 +88,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 //        print(startDate)
         
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     func encodeImageToString(image: UIImage)->String {
@@ -220,15 +235,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //for register, check to see if there's an existing user
     
-    func register(sender: AnyObject) {
+    func register(sender: UIButton) {
+        sender.setTitleColor(UIColor.cyanColor(), forState: .Normal)
         if (usernameField!.text! == "" || passwordField!.text! == "") {
             self.signupErrorAlert("login error", message: "empty username or password, try again")
+            sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
         } else {
         clientRef.observeEventType(.Value, withBlock: {
             snapshot in
             if let somethingelse = snapshot.value[self.usernameField!.text!] {
                 if let something = snapshot.value[self.usernameField!.text!]! {
                     self.signupErrorAlert("login error", message: "existing username, try again")
+                    sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
                 } else {
                     self.successfulRegistration()
                 }
@@ -281,6 +299,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     //check to see if there exists a user, and to see if the password is the same
     func login(sender: AnyObject) {
+        sender.setTitleColor(UIColor.cyanColor(), forState: .Normal)
         clientRef.observeEventType(.Value, withBlock: {
             snapshot in
             if let password1 = snapshot.value[self.usernameField!.text!] {
@@ -296,12 +315,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.successfulLogin(usernameStr, pass: passcode, img: imageStr, hist: historyDat, start: startDat, flakes: flakesDat)
                     } else {
                         self.signupErrorAlert("login error", message: "incorrect password, try again")
+                        sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
                     }
                 } else {
                     self.signupErrorAlert("login error", message: "username doesn't exist, try again")
+                    sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
                 }
             } else {
                 self.signupErrorAlert("login error", message: "no current registered users, please go back and register")
+                sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
             }
             
         })
