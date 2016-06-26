@@ -1,3 +1,3 @@
 # flakr
 
-Flakr app, going to update this soonTM
+Flakr app, coming to an app store near you TM
